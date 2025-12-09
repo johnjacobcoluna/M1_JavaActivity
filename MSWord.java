@@ -1,15 +1,21 @@
 package M2_OOP_Activity;
 
-public class MSWord implements Executable{
-	@Override
-	public void run()
-	{
-		System.out.println("Opening MS Word...");
+public class MSWord extends Program{
+	
+	public MSWord(String name) {
+		this.setName(name);
 	}
+	
 	@Override
-	public void stop()
-	{
+	public void run() {
+		System.out.println("Opening MS Word...");
+		setRun(true);
+	}
+	
+	@Override
+	public void stop() {
 		System.out.println("Stopping MS Word...");
+		setRun(false);
 	}
 	
 }
